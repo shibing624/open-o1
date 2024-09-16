@@ -3,10 +3,11 @@
 @author:XuMing(xuming624@qq.com)
 @description: 
 """
-import streamlit as st
+
 import os
 import json
 import time
+import streamlit as st
 from openai import OpenAI
 from loguru import logger
 from dotenv import load_dotenv
@@ -14,13 +15,15 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key: str = os.getenv("OPENAI_API_KEY")
 base_url: str = os.getenv("OPENAI_BASE_URL")
+MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4o-mini")
 client = OpenAI(api_key=api_key, base_url=base_url)
 
 
 def make_api_call(messages, max_tokens, is_final_answer=False):
+    r = ""
     try:
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model=MODEL_NAME,
             messages=messages,
             max_tokens=max_tokens,
             temperature=1.0,

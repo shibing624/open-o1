@@ -1,0 +1,5 @@
+loguru
+openai
+python-dotenv
+loguru
+streamlit
