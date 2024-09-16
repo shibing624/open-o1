@@ -1,7 +1,5 @@
 # o1: Using GPT-4o with CoT to Create O1-like Reasoning Chains
 
-[Video Demo](https://github.com/user-attachments/assets/db2a221f-f8eb-48c3-b5a7-8399c6300243)
-
 This is an early prototype of using prompting strategies to improve the LLM's reasoning capabilities through o1-like reasoning chains. This allows the LLM to "think" and solve logical problems that usually otherwise stump leading models. Unlike o1, all the reasoning tokens are shown, and the app uses an open source model.
 
 o1 is experimental and being open sourced to help inspire the open source community to develop new strategies to produce o1-like reasoning. This experiment helps show the power of prompting reasoning in visualized steps, not a comparison to or full replication of o1, which uses different techniques. OpenAI's o1 is instead trained with large-scale reinforcement learning to reason using Chain of Thought, achieving state-of-the-art performance on complex PhD-level problems. 
@@ -15,7 +13,7 @@ o1 powered by gpt-4o creates reasoning chains, in principle a dynamic Chain of T
 
 At each step, the LLM can choose to continue to another reasoning step, or provide a final answer. Each step is titled and visible to the user. The system prompt also includes tips for the LLM. There is a full explanation under Prompt Breakdown, but a few examples are asking the model to “include exploration of alternative answers” and “use at least 3 methods to derive the answer”.
 
-The reasoning ability of the LLM is therefore improved through combining Chain-of-Thought with the requirement to try multiple methods, explore alternative answers, question previous draft solutions, and consider the LLM’s limitations. This alone, without any training, is sufficient to achieve ~70% accuracy on the Strawberry problem (n=10, "How many Rs are in strawberry?"). Without prompting, Llama-3.1-70b had 0% accuracy and ChatGPT-4o had 30% accuracy.
+The reasoning ability of the LLM is therefore improved through combining Chain-of-Thought with the requirement to try multiple methods, explore alternative answers, question previous draft solutions, and consider the LLM’s limitations. This alone, without any training, is sufficient to achieve ~70% accuracy on the Strawberry problem (n=10, "How many Rs are in strawberry?"). Without prompting, GPT-4o had 30% accuracy.
 
 
 ### Examples
@@ -29,7 +27,7 @@ Prompt: How many Rs are in strawberry?
 
 Result:
 
-![Strawberry example](docs/r3.png)
+![Strawberry example](https://github.com/shibing624/o1/blob/main/docs/r3.png)
 
 ---
 
@@ -37,32 +35,18 @@ Prompt: Which is larger, .9 or .11?
 
 Result:
 
-![0.9 or 0.11 example](docs/0.9.png)
+![0.9 or 0.11 example](https://github.com/shibing624/o1/blob/main/docs/0.9.png)
 
 
 ### Quickstart
 
 To use the Streamlit UI, follow these instructions:
 
-~~~
-python3 -m venv venv
-~~~
-
-~~~
-source venv/bin/activate
-~~~
-
-~~~
+```shell
 pip3 install -r requirements.txt
-~~~
-
-~~~
 export OPENAI_API_KEY=sk...
-~~~
-
-~~~
 streamlit run app.py
-~~~
+```
 
 ### Prompting Strategy
 
@@ -118,6 +102,57 @@ Finally, after the problem is added as a user message, an assistant message is l
 
 > Assistant: Thank you! I will now think step by step following my instructions, starting at the beginning after decomposing the problem
 
-# Acknowledgements
+
+### Contact
+
+- Issue(建议)
+  ：[![GitHub issues](https://img.shields.io/github/issues/shibing624/agentica.svg)](https://github.com/shibing624/agentica/issues)
+- 邮件我：xuming: xuming624@qq.com
+- 微信我： 加我*微信号：xuming624, 备注：姓名-公司-NLP* 进NLP交流群。
+
+<img src="https://github.com/shibing624/o1/blob/main/docs/wechat.jpeg" width="200" />
+
+<img src="https://github.com/shibing624/o1/blob/main/docs/wechat_group.jpg" width="200" />
+
+
+### Citation
+
+如果你在研究中使用了`o1`，请按如下格式引用：
+
+APA:
+
+```
+Xu, M. o1: Using GPT-4o with CoT to Create O1-like Reasoning Chains (Version 0.0.1) [Computer software]. https://github.com/shibing624/o1
+```
+
+BibTeX:
+
+```
+@misc{Xu_o1,
+  title={o1: Using GPT-4o with CoT to Create O1-like Reasoning Chains},
+  author={Xu Ming},
+  year={2024},
+  howpublished={\url{https://github.com/shibing624/o1}},
+}
+```
+
+### License
+
+授权协议为 [The Apache License 2.0](/LICENSE)，可免费用做商业用途。请在产品说明中附加`agentica`的链接和授权协议。
+### Contribute
+
+项目代码还很粗糙，如果大家对代码有所改进，欢迎提交回本项目，在提交之前，注意以下两点：
+
+- 在`tests`添加相应的单元测试
+- 使用`python -m pytest`来运行所有单元测试，确保所有单测都是通过的
+
+之后即可提交PR。
+
+### Acknowledgements 
+
 - [g1](https://github.com/bklieger-groq/g1)
 - [openai-o1](https://openai.com/o1/)
+
+
+Thanks for their great work!
+
