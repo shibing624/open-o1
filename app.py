@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 @author:XuMing(xuming624@qq.com)
-@description: 
+@description: streamlit app
+
+usage: streamlit run app.py
 """
 
 import os
@@ -116,8 +118,11 @@ def main():
     """)
 
     # Text input for user query
-    user_query = st.text_area(label="Enter your query:", placeholder="e.g., How many 'R's are in the word strawberry?",
-                              height=3)
+    user_query = st.text_area(
+        label="Enter your query:",
+        placeholder="e.g., How many 'R's are in the word strawberry?",
+        height=3
+    )
 
     if user_query:
         st.write("Generating response...")
