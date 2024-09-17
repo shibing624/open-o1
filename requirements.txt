@@ -3,3 +3,4 @@ openai
 python-dotenv
 loguru
 streamlit
+gradio
