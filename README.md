@@ -24,7 +24,7 @@ open-o1 powered by gpt-4o creates reasoning chains, in principle a dynamic Chain
 
 At each step, the LLM decides whether to continue or provide a final answer, with titles for clarity. The prompt includes tips such as exploring alternative answers and employing multiple methods to derive the solution.
 
-This approach, combining Chain of Thought reasoning with the exploration of alternatives and self-awareness of limitations, significantly improves accuracy on problems like the Strawberry problem, achieving about 70% accuracy without additional training (compared to 30% without prompts).
+This approach, combining Chain of Thought reasoning with the exploration of alternatives and self-awareness of limitations, significantly improves accuracy on problems like the Strawberry problem, achieving openai-o1 70% accuracy without additional training (compared to 30% without CoT prompts for gpt-4o).
 
 ### Demo
 
