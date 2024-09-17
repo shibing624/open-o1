@@ -10,7 +10,7 @@ from o1 import cot_response_stream
 
 
 def main():
-    st.set_page_config(page_title="open-o1", page_icon="🧠", layout="wide")
+    st.set_page_config(page_title="open-o1", page_icon="🤔", layout="wide")
 
     st.title("open-o1: Using GPT-4o with CoT to Create o1-like Reasoning Chains")
 

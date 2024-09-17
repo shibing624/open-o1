@@ -41,7 +41,7 @@ def main(user_query):
 
 # Define the Gradio interface
 with gr.Blocks() as demo:
-    gr.Markdown("# 🧠 open-o1: Using GPT-4o with CoT to Create o1-like Reasoning Chains")
+    gr.Markdown("# 🤔 open-o1: Using GPT-4o with CoT to Create o1-like Reasoning Chains")
 
     gr.Markdown("""
     open-o1: Using prompting to create o1-like reasoning chains to improve output accuracy. 
