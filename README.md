@@ -27,7 +27,8 @@ At each step, the LLM decides whether to continue or provide a final answer, wit
 This approach, combining Chain of Thought reasoning with the exploration of alternatives and self-awareness of limitations, significantly improves accuracy on problems like the Strawberry problem, achieving about 70% accuracy without additional training (compared to 30% without prompts).
 
 ### Demo
-[demo](http://180.76.159.247:8502/)
+
+Web Demo: http://180.76.159.247:8502/
 
 ### Examples
 
