@@ -32,15 +32,14 @@ Web Demo: http://180.76.159.247:8502/
 > [!重要]
 > open-o1 并不完美，但它能比现成的 LLM 表现显著更好。从初步测试来看，open-o1 在通常让 LLM 难倒的简单逻辑问题上准确解决了 60-80% 的问题。
 
-##### 草莓中有多少个 R？
-提示：草莓中有多少个 R？
+提示：How many 'r's are in the word 'strawberry'?
 
 结果：
 
 ![草莓示例](https://github.com/shibing624/open-o1/blob/main/docs/r3.png)
 ---
 
-提示：0.9 和 0.11 哪个更大？
+提示：Which is larger, .9 or .11?
 
 结果：
 
@@ -75,7 +74,7 @@ streamlit run app.py
 }
 ```
 
-#### 细目说明
+#### 细节说明
 
 1. **角色设定**：将助手角色设定为专家 AI。
 2. **逐步推理**：每一步都必须有标题和详细内容，并且有提示是否继续或提供最终答案。
@@ -97,8 +96,6 @@ streamlit run app.py
 - 微信我： 加我*微信号：xuming624, 备注：姓名-公司-NLP* 进NLP交流群。
 
 <img src="https://github.com/shibing624/open-o1/blob/main/docs/wechat.jpeg" width="200" />
-
-<img src="https://github.com/shibing624/open-o1/blob/main/docs/wechat_group.jpg" width="200" />
 
 
 ### Citation

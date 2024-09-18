@@ -98,8 +98,6 @@ Example of a valid JSON response:
 
 <img src="https://github.com/shibing624/open-o1/blob/main/docs/wechat.jpeg" width="200" />
 
-<img src="https://github.com/shibing624/open-o1/blob/main/docs/wechat_group.jpg" width="200" />
-
 
 ### Citation
 
