@@ -35,9 +35,7 @@ Web Demo: http://180.76.159.247:8502/
 > [!IMPORTANT]
 > open-o1 is not perfect, but it can perform significantly better than LLMs out-of-the-box. From initial testing, open-o1 accurately solves simple logic problems 60-80% of the time that usually stump LLMs.
 
-
-##### How many Rs are in strawberry?
-Prompt: How many Rs are in strawberry?
+Prompt: How many 'r's are in the word 'strawberry'?
 
 Result:
 
