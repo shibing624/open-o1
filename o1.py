@@ -52,6 +52,31 @@ def make_api_call(messages, max_tokens, is_final_answer=False):
 def cot_response_stream(prompt):
     """
     Generate reasoning steps for a given prompt using the CoT method. stream mode.
+    messages:
+    ```json
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "你是一个专家级的人工智能助手，逐步解释你的推理过程。每一步都提供一个标题，描述你在该步骤中所做的事情，并附上内容。
+                决定是否需要另一步，或者是否准备好给出最终答案。以JSON格式回应，包含'title'、'content'和'next_action'（'continue'或'final_answer'）键。
+                尽可能使用多个推理步骤，至少3个。注意你作为大型语言模型的局限性，以及你能做和不能做的事情。在推理中，探索替代答案。
+                考虑到你可能是错误的，如果你的推理有误，指出错误的地方。全面测试所有其他可能性。你可能会错。当你说你在重新审视时，
+                实际上要重新审视，并使用另一种方法进行。不要仅仅说你在重新审视。使用至少3种方法得出答案，并遵循最佳实践。
+                使用与问题相同的语言回答。如果问题使用中文，答案也应为中文。",
+                "next_action": "continue"
+            },
+            {
+                "role": "user",
+                "content": "prompt"
+            },
+            {
+                "role": "assistant",
+                "content": "谢谢！我将按照我的指示逐步思考，从分解问题开始。"
+            }
+        ]
+    }
+    ```
     :param prompt: str, query
     :return: steps, total_thinking_time
     """
