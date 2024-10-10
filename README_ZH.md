@@ -29,7 +29,8 @@ open-o1 展示了仅通过提示就能克服诸如草莓问题等简单逻辑问
 Web Demo: http://180.76.159.247:8502/
 ### 示例
 
-> [!重要]
+> [!Important]
+> 
 > open-o1 并不完美，但它能比现成的 LLM 表现显著更好。从初步测试来看，open-o1 在通常让 LLM 难倒的简单逻辑问题上准确解决了 60-80% 的问题。
 
 提示：How many 'r's are in the word 'strawberry'?
