@@ -119,7 +119,8 @@ Example of a valid JSON response:
         yield steps, total_thinking_time
 
     # Generate final answer
-    messages.append({"role": "user", "content": "Please provide the final answer based on your reasoning above."})
+    messages.append({"role": "user", "content": "Please provide the final answer based on your reasoning above. "
+                                                "output md format."})
 
     start_time = time.time()
     final_data = make_api_call(messages, 1000, is_final_answer=True)
