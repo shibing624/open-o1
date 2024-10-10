@@ -64,6 +64,15 @@ with gr.Blocks() as demo:
 
     submit_btn.click(fn=main, inputs=[user_input], outputs=output_html)
 
+    # Add examples
+    examples = gr.Examples(
+        examples=[
+            ["How many 'R's are in the word strawberry?"],
+            ["Solve the equation 2x + 3 = 7. What is x?"],
+            ["Amy 有 5 个苹果，她又买了 3 个苹果。然后她给了她的朋友 2 个苹果。最后，她还剩下多少个苹果？"]
+        ],
+        inputs=[user_input]
+    )
 # Launch the Gradio app
 if __name__ == "__main__":
     demo.launch()
