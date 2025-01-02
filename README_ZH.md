@@ -26,7 +26,8 @@ open-o1 展示了仅通过提示就能克服诸如草莓问题等简单逻辑问
 
 ### Demo
 
-Web Demo: http://180.76.159.247:8502/
+Web Demo: [https://o1.mulanai.com/](https://o1.mulanai.com/)
+
 ### 示例
 
 > [!Important]

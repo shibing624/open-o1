@@ -28,7 +28,7 @@ This approach, combining Chain of Thought reasoning with the exploration of alte
 
 ### Demo
 
-Web Demo: http://180.76.159.247:8502/
+Web Demo: [https://o1.mulanai.com/](https://o1.mulanai.com/)
 
 ### Examples
 
